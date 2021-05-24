@@ -30,22 +30,22 @@ func Login(db *mongo.Database) func(http.ResponseWriter, *http.Request) {
 			panic(err)
 		}
 
-		notfd := false
+		found := false
 
 		for _, userlpd := range userdata {
 			if userlpd["username"] != ld.Username || userlpd["password"] != ld.Password {
-				notfd = false
+				found = false
 				continue
 
 			} else if userlpd["username"] == ld.Username && userlpd["password"] == ld.Password {
 				fmt.Println("I m logged in")
-				notfd = true
+				found = true
 				break
 			}
 
 		}
 
-		if !notfd {
+		if !found {
 			fmt.Println("plaese provide correct details")
 		}
 	}

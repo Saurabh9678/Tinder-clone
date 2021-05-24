@@ -21,6 +21,7 @@ func main() {
 	http.HandleFunc("/register", operations.Register(db))
 	http.HandleFunc("/login", operations.Login(db))
 	http.HandleFunc("/user", operations.ListUsers(db))
+	http.HandleFunc("/swipe", operations.Swipe(db))
 	http.ListenAndServe(":8000", nil)
 }
 func mongodb() *mongo.Database {

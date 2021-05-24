@@ -4,4 +4,5 @@ class Myroutes {
   static String numlike = "/num_likes";
   static String chat = "/chat";
   static String profile = "/profile";
+  static String register = "/register";
 }

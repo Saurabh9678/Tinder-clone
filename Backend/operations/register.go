@@ -3,6 +3,7 @@ package operations
 import (
 	"net/http"
 	"strconv"
+	"sync"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -10,14 +11,21 @@ import (
 )
 
 func Register(db *mongo.Database) func(http.ResponseWriter, *http.Request) {
+	nextId := 1
+	var nextIdLock sync.Mutex
 	return func(w http.ResponseWriter, r *http.Request) {
 		r.ParseForm()
+
 		age, err := strconv.Atoi(r.FormValue("age"))
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
 			return
 		}
+		nextIdLock.Lock()
+		myId := nextId + 1
+		nextId += 1
 		u := &models.Users{
+			ID:       myId,
 			Name:     r.FormValue("name"),
 			Username: r.FormValue("username"),
 			Password: r.FormValue("password"),

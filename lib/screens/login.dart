@@ -108,14 +108,53 @@ class LoginPage extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            height: 40,
+                            height: 30,
                           ),
                           ElevatedButton(
                               onPressed: () {
                                 Navigator.pushNamed(
                                     context, Myroutes.mainscreen);
                               },
-                              child: Text("Login"))
+                              child: Text("Login")),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Don't have an account?",
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 15),
+                                  child: InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Myroutes.register);
+                                    },
+                                    child: Container(
+                                      width: 70,
+                                      height: 28,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(5)),
+                                      child: Center(
+                                        child: Text(
+                                          "Sign up",
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.blue,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
                         ],
                       ),
                     )
