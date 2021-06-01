@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:tinder_clone/data/likes_json.dart';
 
 class Likebody extends StatefulWidget {
@@ -88,7 +87,7 @@ class _LikebodyState extends State<Likebody> {
         ],
       ),
       bottomSheet: Padding(
-        padding: const EdgeInsets.fromLTRB(19.0, 0.0, 19.0, 20),
+        padding: const EdgeInsets.fromLTRB(19.0, 5.0, 19.0, 10),
         child: Container(
           width: size.width * 0.9,
           height: size.height * 0.07,

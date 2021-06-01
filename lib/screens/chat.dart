@@ -19,7 +19,6 @@ class _ChatpageState extends State<Chatpage> {
   }
 
   Widget getChat() {
-    var size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(

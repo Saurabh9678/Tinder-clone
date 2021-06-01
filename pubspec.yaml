@@ -32,6 +32,8 @@ dependencies:
   line_icons:
   flutter_svg:
   flutter_custom_clippers: ^1.1.2
+  provider: ^4.0.2
+  http: ^0.13.3
 
 dev_dependencies:
   flutter_test:

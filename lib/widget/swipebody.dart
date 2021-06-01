@@ -33,148 +33,145 @@ class _SwipebodyState extends State<Swipebody> {
                     spreadRadius: 1,
                   )
                 ]),
-            child: ClipRRect(
-              child: Stack(
-                children: [
-                  Container(
-                    width: size.width,
-                    height: size.height,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(explore_json[index]['img']),
-                            fit: BoxFit.cover)),
-                  ),
-                  Container(
-                    width: size.width,
-                    height: size.height,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: size.width * 0.75,
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 25,
-                                      ),
-                                      Text(
-                                        explore_json[index]['name'],
-                                        style: TextStyle(
-                                            fontFamily:
-                                                GoogleFonts.ledger().fontFamily,
-                                            fontSize: 30,
-                                            color: Colors.white),
-                                      ),
-                                      SizedBox(
-                                        width: 10.0,
-                                      ),
-                                      Text(
-                                        explore_json[index]['age'],
-                                        style: TextStyle(
-                                          color: Colors.white,
+            child: Stack(
+              children: [
+                Container(
+                  width: size.width,
+                  height: size.height,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(explore_json[index]['img']),
+                          fit: BoxFit.cover)),
+                ),
+                Container(
+                  width: size.width,
+                  height: size.height,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            width: size.width * 0.75,
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 25,
+                                    ),
+                                    Text(
+                                      explore_json[index]['name'],
+                                      style: TextStyle(
                                           fontFamily:
                                               GoogleFonts.ledger().fontFamily,
-                                          fontSize: 22,
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  
-                                  Wrap(
-                                    direction: Axis.horizontal,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            right: 5.0, bottom: 10.0),
-                                        child: Container(
-                                          width: size.width * 0.25,
-                                          height: size.height * 0.03,
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Colors.white.withOpacity(0.4),
-                                              borderRadius:
-                                                  BorderRadius.circular(30),
-                                              border: Border.all(
-                                                  color: Colors.white)),
-                                          child: Center(
-                                            child: Text(
-                                              explore_json[index]['likes'][2],
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontFamily: GoogleFonts.lato()
-                                                      .fontFamily),
-                                            ),
+                                          fontSize: 30,
+                                          color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      width: 10.0,
+                                    ),
+                                    Text(
+                                      explore_json[index]['age'],
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily:
+                                            GoogleFonts.ledger().fontFamily,
+                                        fontSize: 22,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Wrap(
+                                  direction: Axis.horizontal,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          right: 5.0, bottom: 10.0),
+                                      child: Container(
+                                        width: size.width * 0.2,
+                                        height: size.height * 0.03,
+                                        decoration: BoxDecoration(
+                                            color:
+                                                Colors.white.withOpacity(0.4),
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                            border: Border.all(
+                                                color: Colors.white)),
+                                        child: Center(
+                                          child: Text(
+                                            explore_json[index]['likes'][2],
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontFamily: GoogleFonts.lato()
+                                                    .fontFamily),
                                           ),
                                         ),
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            right: 5.0, bottom: 10.0),
-                                        child: Container(
-                                          width: size.width * 0.25,
-                                          height: size.height * 0.03,
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Colors.white.withOpacity(0.4),
-                                              borderRadius:
-                                                  BorderRadius.circular(30),
-                                              border: Border.all(
-                                                  color: Colors.white)),
-                                          child: Center(
-                                            child: Text(
-                                              explore_json[index]['likes'][0],
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontFamily: GoogleFonts.lato()
-                                                      .fontFamily),
-                                            ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          right: 5.0, bottom: 10.0),
+                                      child: Container(
+                                        width: size.width * 0.2,
+                                        height: size.height * 0.03,
+                                        decoration: BoxDecoration(
+                                            color:
+                                                Colors.white.withOpacity(0.4),
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                            border: Border.all(
+                                                color: Colors.white)),
+                                        child: Center(
+                                          child: Text(
+                                            explore_json[index]['likes'][0],
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontFamily: GoogleFonts.lato()
+                                                    .fontFamily),
                                           ),
                                         ),
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            right: 5.0, bottom: 10.0),
-                                        child: Container(
-                                          width: size.width * 0.25,
-                                          height: size.height * 0.03,
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Colors.white.withOpacity(0.4),
-                                              borderRadius:
-                                                  BorderRadius.circular(30),
-                                              border: Border.all(
-                                                  color: Colors.white)),
-                                          child: Center(
-                                            child: Text(
-                                              explore_json[index]['likes'][1],
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontFamily: GoogleFonts.lato()
-                                                      .fontFamily),
-                                            ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          right: 5.0, bottom: 10.0),
+                                      child: Container(
+                                        width: size.width * 0.2,
+                                        height: size.height * 0.03,
+                                        decoration: BoxDecoration(
+                                            color:
+                                                Colors.white.withOpacity(0.4),
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                            border: Border.all(
+                                                color: Colors.white)),
+                                        child: Center(
+                                          child: Text(
+                                            explore_json[index]['likes'][1],
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontFamily: GoogleFonts.lato()
+                                                    .fontFamily),
                                           ),
                                         ),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                )
+              ],
             ),
           ),
         ),

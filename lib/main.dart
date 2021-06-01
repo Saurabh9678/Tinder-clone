@@ -5,20 +5,23 @@ import 'package:tinder_clone/screens/num_like.dart';
 import 'package:tinder_clone/screens/profile.dart';
 import 'package:tinder_clone/screens/register.dart';
 import 'package:tinder_clone/screens/swipe.dart';
-
 import 'package:tinder_clone/screens/login.dart';
 import 'package:tinder_clone/widget/routes.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Tinderapp());
 }
 
-class MyApp extends StatelessWidget {
+class Tinderapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(fontFamily: GoogleFonts.lato().fontFamily),
+        theme: ThemeData(
+          fontFamily: GoogleFonts.lato().fontFamily,
+          bottomSheetTheme: BottomSheetThemeData(
+              backgroundColor: Colors.black.withOpacity(0)),
+        ),
         initialRoute: Myroutes.login,
         routes: {
           Myroutes.login: (context) => LoginPage(),
