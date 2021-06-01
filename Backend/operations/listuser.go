@@ -28,7 +28,7 @@ func ListUsers(db *mongo.Database) func(http.ResponseWriter, *http.Request) {
 		if err != nil {
 			panic(err)
 		}
-		w.Header().Set("Content-type", "application/json")
+
 		w.Write(b)
 	}
 }

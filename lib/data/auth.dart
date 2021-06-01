@@ -9,9 +9,9 @@ class Auth with ChangeNotifier {
 
     var response = await http.post(registerurl,
         body: json.encode({
-          'name': name,
-          'age': age,
-          'location': location,
+          // 'name': name,
+          // 'age': age,
+          // 'location': location,
           'username': username,
           'password': password,
         }));
